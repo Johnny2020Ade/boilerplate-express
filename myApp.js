@@ -3,9 +3,23 @@ var express = require('express');
 var app = express();
 
 // --> 7)  Mount the Logger middleware here
+console.log("Hello world")
 
 
 // --> 11)  Mount the body-parser middleware  here
+
+/*app.get("/", function(req, res) {
+    res.send("Hello Express");
+  });
+
+app.get("/", (req, res) => {
+    res.send("Hello Express");
+  });*/
+
+  app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/views/index.html");
+  });
+
 
 
 /** 1) Meet the node console. */
